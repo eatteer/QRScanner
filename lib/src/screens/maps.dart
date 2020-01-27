@@ -11,22 +11,10 @@ class Maps extends StatelessWidget {
       builder: (BuildContext context, AsyncSnapshot<List<ScanModel>> snapshot) {
         if (!snapshot.hasData) return Container();
         if (snapshot.data.length == 0) {
-          return Align(
-            alignment: Alignment.center,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Image(
-                  height: 200.0,
-                  width: 200.0,
-                  image: AssetImage('lib/src/assets/map.png'),
-                ),
-                SizedBox(height: 10.0),
-                Text(
-                  'No maps',
-                  style: Theme.of(context).textTheme.title,
-                )
-              ],
+          return Center(
+            child: Text(
+              'No maps',
+              style: Theme.of(context).textTheme.title,
             ),
           );
         }
