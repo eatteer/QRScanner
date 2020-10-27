@@ -4,4 +4,4 @@ Flutter project.
 
 ## Overview
 
-Save data into phone using barcode_scan library.
+Scan QR codes using barcode_scan library.
